@@ -1,0 +1,11 @@
+EXIT ;
+exi t ;
+SHOW TABLES;
+SELECT * FROM users;
+show users;
+show * users;
+SELECT * FROM users;
+SELECT * from users;
+select * from users;
+clear ;
+select * from notes ;

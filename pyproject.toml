@@ -1,0 +1,25 @@
+[project]
+name = "notes-pet-project"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.120.4,<0.121.0)",
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "uvicorn (>=0.38.0,<0.39.0)",
+    "pymysql (>=1.1.2,<2.0.0)",
+    "cryptography (>=46.0.3,<47.0.0)",
+    "mysql-connector-python (>=9.5.0,<10.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "notes_pet_project", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
