@@ -13,6 +13,3 @@ app.include_router(notes_router)
 
 init_db()
 
-
-
-

@@ -14,7 +14,8 @@ dependencies = [
     "uvicorn (>=0.38.0,<0.39.0)",
     "pymysql (>=1.1.2,<2.0.0)",
     "cryptography (>=46.0.3,<47.0.0)",
-    "mysql-connector-python (>=9.5.0,<10.0.0)"
+    "mysql-connector-python (>=9.5.0,<10.0.0)",
+    "aiomysql (>=0.3.2,<0.4.0)",
 ]
 
 [tool.poetry]
