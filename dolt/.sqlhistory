@@ -9,3 +9,8 @@ SELECT * from users;
 select * from users;
 clear ;
 select * from notes ;
+show tables;
+show * from users;
+select * from users;
+select * from notes;
+select * from users;
