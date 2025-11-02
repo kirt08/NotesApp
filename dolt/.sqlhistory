@@ -14,3 +14,4 @@ show * from users;
 select * from users;
 select * from notes;
 select * from users;
+select * from notes;

@@ -9,7 +9,7 @@ class User(UserBase):
     id : Annotated[int, Field(...)]
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class NoteBase(BaseModel):
     title : Annotated[str, Field(..., min_length=4)]
@@ -20,4 +20,4 @@ class Note(NoteBase):
     id : Annotated[int, Field(...)]
 
     class Config:
-        orm_mode = True
+        from_attributes = True
