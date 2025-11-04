@@ -11,11 +11,16 @@ class User(UserBase):
     class Config:
         from_attributes = True
 
+
 class NoteBase(BaseModel):
     title : Annotated[str, Field(..., min_length=4)]
     text : str
     author_name : str
 
+class NoteUpdate(BaseModel):
+    title : Annotated[str, Field(..., min_length=4)]
+    text : str
+    
 class Note(NoteBase):
     id : Annotated[int, Field(...)]
 

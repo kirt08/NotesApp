@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException, Depends
-from typing import List
+from typing import List, Dict
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
 from database import get_db
-from models import NoteBase, Note
+from models import NoteBase, Note, UserBase, NoteUpdate
 from database_schemas import Users, Notes
 
 
@@ -46,3 +46,29 @@ async def show_note_by_author_name(author_name : str, db : AsyncSession = Depend
     if not temp_user:
         raise HTTPException(status_code=404)
     return [{"title": note.title, "text": note.text} for note in temp_user.notes]
+
+
+@router.put("/update_note")
+async def update_note(note : NoteUpdate, user : UserBase, db : AsyncSession = Depends(get_db)) -> Dict:
+    result = await db.execute(
+        select(Users)
+        .options(selectinload(Users.notes))
+        .filter(Users.login == user.login)
+    )
+    temp_user = result.scalars().first()
+
+    if not temp_user:
+        return {"data": f"User {user.login} was not found"}
+    
+    if not temp_user.notes:
+        return {"data": "Note not found for the user"}
+
+    note_to_update = temp_user.notes[0]
+    
+    note_to_update.title = note.title
+    note_to_update.text = note.text
+
+    await db.commit()
+
+    return {"data": f"Note with name {note.title} was updated"}
+    
