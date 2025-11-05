@@ -19,7 +19,7 @@ async def create_user(user : UserBase, db : AsyncSession = Depends(get_db)) -> d
     ).scalars().first():
         raise HTTPException(status_code=409, detail="Login already exists")
     
-    new_user =  Users(login = user.login, password = to_hash(user.password))
+    new_user =  Users(login = user.login, password = to_hash(user.password), hash_previous_commit = None)
     db.add(new_user)
     await db.commit()
     await db.refresh(new_user)

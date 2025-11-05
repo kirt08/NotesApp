@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Annotated
+from typing import Annotated, Optional
 
 class UserBase(BaseModel):
     login : Annotated[str, Field(..., min_length=1, max_length=64)]
@@ -7,6 +7,7 @@ class UserBase(BaseModel):
 
 class User(UserBase):
     id : Annotated[int, Field(...)]
+    hash_previous_commit : Annotated[Optional[str], Field(...)]
 
     class Config:
         from_attributes = True
