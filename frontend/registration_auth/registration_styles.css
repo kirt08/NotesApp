@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-size: 1.5rem;
+    font-family: "Elms Sans", sans-serif;
+}
+
+.registration_form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 60%;
+    padding: 1%;
+    margin: 45px 40% 0 40%;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.registration_form_login_label {
+    margin-bottom: 5px;
+}
+
+.registration_form_login_input {
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+    height: 2.5rem;
+    padding-left: 5px;
+}
+
+.registration_form_password_label {
+    margin-bottom: 5px;
+}
+
+.registration_form_password_input {
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+    height: 2.5rem;
+
+    padding-left: 5px;
+}
+
+.registration_form_error_div {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration_form_error_p {
+    color: rgb(255, 85, 85);
+    font-size: 1.2rem;
+}
+
+.registration_form_buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.registration_form_button_sign_up {
+    display: block;
+    width: 40%; 
+    height: 2rem;
+    margin: 10px auto;
+    background-color: white;
+    font-size: 20px;
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+}
+
+.registration_form_button_sign_up:hover {
+    background-color: rgb(231, 231, 133);
+}
+
+.registration_form_button_login {
+    display: block;
+    width: 40%; 
+    height: 2rem;
+    margin: 10px auto;
+    background-color: white;
+    font-size: 20px;
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+}
+
+.registration_form_button_login:hover {
+    background-color: rgb(145, 255, 49);
+}
+

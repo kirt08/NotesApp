@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Body
 
 from sqlalchemy import text, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -10,8 +10,8 @@ from database_schemas import Users, NotesDiffs
 
 router = APIRouter(prefix="/dolt", tags=["dolt"])
 
-@router.post("/commit")
-async def dolt_commit(user_name : Annotated[str, (...)], db : AsyncSession = Depends(get_db)) -> Dict:
+@router.get("/commit/{user_name}")
+async def dolt_commit(user_name : Annotated[str, Field(...)], db : AsyncSession = Depends(get_db)) -> Dict:
     res = await db.execute(select(Users).filter(Users.login == user_name))
     user = res.scalars().first()
 

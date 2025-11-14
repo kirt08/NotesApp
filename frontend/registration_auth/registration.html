@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="registration_styles.css">
+    <script src="registration_scripts.js" defer></script>
+</head>
+<body>
+    <form class="registration_form">
+        <label for="login" class="registration_form_login_label">Login</label>
+        <input type="text" name="login" class="registration_form_login_input" placeholder="login" required>
+        
+        <label for="password" class="registration_form_password_label">Password</label>
+        <input type="password" name="password" class="registration_form_password_input" placeholder="password" required>
+        
+        <div class="registration_form_error_div">
+            <p class="registration_form_error_p"></p>
+        </div>
+        <div class="registration_form_buttons">
+            <button type="submit" class="registration_form_button_sign_up">Sign Up</button>
+            <button type="submit" class="registration_form_button_login">Login</button>
+        </div>
+    </form>
+</body>
+</html>

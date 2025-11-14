@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметки пользователя</title>
+    <link rel="stylesheet" href="main_page_styles.css">
+    <script src="main_page_scripts.js" defer></script>
+</head>
+<body>
+    <h1 class="main_title">Менеджер заметок</h1>
+
+    <form class="note_form">
+        <label for="note_title" class="note_label">Заголовок:</label>
+        <input type="text" id="note_title" name="title" class="note_input" placeholder="Введите заголовок заметки" required>
+
+        <label for="note_text" class="note_label">Текст заметки:</label>
+        <textarea id="note_text" name="text" class="note_textarea" placeholder="Введите текст заметки..." required></textarea>
+
+        <label for="note_author" class="note_label">Автор:</label>
+        <input type="text" id="note_author" name="author_name" class="note_input" placeholder="Ваш логин" required>
+
+        <div class="note_error_div">
+            <p class="note_error_p"></p>
+        </div>
+
+        <div class="note_buttons_div">
+            <button type="button" class="note_button" id="create_btn">Создать заметку</button>
+            <button type="button" class="note_button" id="update_btn">Обновить заметку</button>
+            <button type="button" class="note_button" id="commit_btn">Сделать коммит</button>
+            <button type="button" class="note_button" id="rollback_btn">Посмотреть предыдущий коммит</button>
+            <button type="button" class="note_button" id="show_btn">Посмотреть заметку</button>
+        </div>
+    </form>
+</body>
+</html>

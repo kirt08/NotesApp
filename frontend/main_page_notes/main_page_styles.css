@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.main_title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.note_form {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    height: 60%;
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.note_label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.note_input,
+.note_textarea {
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 1rem;
+    padding: 8px;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.note_textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.note_error_div {
+    height: 25px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note_error_p {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.note_buttons_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.note_button {
+    width: 48%;
+    padding: 10px;
+    margin: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #e8e8e8;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.note_button:nth-child(1):hover {
+    background-color: #d4d4d4;
+}
+.note_button:nth-child(2):hover {
+    background-color: #d4d4d4;
+}
+.note_button:nth-child(3):hover {
+    background-color: rgb(142, 255, 142);
+}
+.note_button:nth-child(4):hover {
+    background-color: rgba(255, 107, 132, 0.709);
+}
+
+.note_button:nth-child(5) {
+    width: 96%;
+}
+
+.note_button:nth-child(5):hover {
+    background-color: rgba(130, 255, 255, 0.771);
+}
