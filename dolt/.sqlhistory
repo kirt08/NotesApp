@@ -16,3 +16,4 @@ select * from users;
 select * from dolt_diff_notes;
 DESCRIBE dolt_diffs_notes;
 DESCRIBE dolt_diff_notes;
+select * from users;
